@@ -3,6 +3,7 @@ node_modules/
 dist/
 npm-debug.log
 yarn-error.log
+src/assets/f4772ebf5aa954f9871fd35b793a43ae.ico
 
 # Editor directories and files
 .idea
