@@ -1,9 +1,12 @@
 <template>
     <div class="row">
         <div class="col-sm-12">
-            <div class="md-form">
-                <label for="textareainput"><h4>Edit Text:</h4></label><br /><br />
-                <textarea id="textareainput" class="form-control rounded-0" rows="3" 
+            <div class="form-group shadow-textarea">
+                <i class="fas fa-pencil-alt prefix"></i>
+                <label for="textareainput">Edit Text: </label><br />
+                <textarea id="textareainput" 
+                class="form-control z-depth-1" 
+                rows="3" 
                 placeholder="Add text here"
                 v-model="textBoxInput"
                 @keyup="textChanged"></textarea>

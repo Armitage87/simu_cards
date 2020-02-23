@@ -6,9 +6,9 @@
             <sc-text-input @displayTextChanged="textBoxValue3=$event"></sc-text-input>
         </div>
         <div class="col-sm-6 card card-display">
-            <sc-text-output :displayText="textBoxValue1"></sc-text-output>
-            <sc-text-output :displayText="textBoxValue2"></sc-text-output>
-            <sc-text-output :displayText="textBoxValue3"></sc-text-output>
+            <sc-text-output :displayText="textBoxValue1" :conteinerHeight="130"></sc-text-output>
+            <sc-text-output :displayText="textBoxValue2" :conteinerHeight="130"></sc-text-output>
+            <sc-text-output :displayText="textBoxValue3" :conteinerHeight="130"></sc-text-output>
         </div>
     </div> 
 </template>
