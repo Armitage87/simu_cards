@@ -2,6 +2,7 @@
     <div class="row">
         <div class="col-sm-6 card edit-area">
             <sc-text-input @displayTextChanged="textBoxValue1=$event"></sc-text-input>
+            <sc-image-upload></sc-image-upload><hr>
             <sc-text-input @displayTextChanged="textBoxValue2=$event"></sc-text-input>
             <sc-text-input @displayTextChanged="textBoxValue3=$event"></sc-text-input>
         </div>
@@ -16,6 +17,7 @@
 <script>
 import TextInput from './TextInput.vue'
 import TextOutput from './TextOutput.vue'
+import ImageUpload from './ImageUpload.vue'
 
 export default {
     data: () => {
@@ -27,7 +29,8 @@ export default {
     },
     components: {
         scTextInput: TextInput,
-        scTextOutput: TextOutput
+        scTextOutput: TextOutput,
+        scImageUpload: ImageUpload
     }    
 }
 </script>
