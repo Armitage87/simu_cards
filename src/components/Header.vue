@@ -42,4 +42,5 @@ export default {
     h1 {
         margin-top: 10px;
     }
+
 </style>
