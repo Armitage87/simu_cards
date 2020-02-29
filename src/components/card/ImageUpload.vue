@@ -10,7 +10,7 @@
                 </div>
             <br/>
             <img id="image">
-            <button type="button" id="setImageButton" class="btn purple-gradient">Set Image</button>
+            <button type="button" id="setImageButton" class="btn purple-gradient" style="display:none">Set Image</button>
         </div>        
     </div>
 </template>
@@ -40,6 +40,10 @@ export default {
             upload.on('state_changed', function(snapshot) {
                 var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                 document.getElementById('progressBar').style = "width:" + progress + "%"
+
+                if(progress === 100) {
+                    document.getElementById('setImageButton').style.display = 'inline-block'
+                }
             })
 
             this.$emit('displayImageChanged', this.file.name)

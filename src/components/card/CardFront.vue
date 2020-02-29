@@ -1,10 +1,10 @@
 <template>
     <div class="row">
         <div class="col-sm-6 card edit-area">
-            <sc-text-input @displayTextChanged="textBoxValue1=$event"></sc-text-input><hr>
+            <sc-text-input @displayTextChanged="textBoxValue1=$event"></sc-text-input>
             <sc-image-upload @displayImageChanged="imageName = $event"></sc-image-upload><hr>
-            <sc-text-input @displayTextChanged="textBoxValue2=$event"></sc-text-input><hr>
-            <sc-text-input @displayTextChanged="textBoxValue3=$event"></sc-text-input><hr>
+            <sc-text-input @displayTextChanged="textBoxValue2=$event"></sc-text-input>
+            <sc-text-input @displayTextChanged="textBoxValue3=$event"></sc-text-input>
         </div>
         <div class="col-sm-6 card card-display">
             <sc-text-output :displayText="textBoxValue1" :conteinerHeight="130"></sc-text-output><hr>

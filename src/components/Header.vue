@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="padding-bottom: 10px;">
         <h1 class="text-center"><b>SIMU CARDS</b><small class="text-muted"> A Harvey&trade; Product</small></h1>
             <nav class="navbar navbar-expand-lg navbar-dark secondary-color lighten-1">
                 <a class="navbar-brand" href="#"><img src="../assets/logo.png" width="70" height="60" alt=""></a>

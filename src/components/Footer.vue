@@ -1,4 +1,5 @@
 <template>
+<div style="padding-top: 10px;">
 <footer class="page-footer font-small secondary-color lighten-1">
 
   <div class="container-fluid text-center text-md-left">
@@ -61,6 +62,7 @@
   </div>
 
 </footer>
+</div>
 </template>
 
 <script>
