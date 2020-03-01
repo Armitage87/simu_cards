@@ -1,5 +1,31 @@
 <template>
-    <div>
+    <div  @mouseover="showOptions=true"
+          @mouseleave="showOptions=false">
+        <form class="small" v-show="showOptions" style="display: inline-block">
+            <label for="selectBox">Font Size: </label>
+            <select class="custom-select w-auto" id="selectBox" v-model="setFontSize">
+                <option value="42">42px</option>
+                <option value="48">48px</option>
+                <option value="56">56px</option>
+                <option value="64">64px</option>
+            </select>
+
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="left" v-model="setTextAlign">Left
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="center" v-model="setTextAlign">Centre
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="right" v-model="setTextAlign">Right
+                </label>
+            </div>
+        </form>
         <p :style="styleObject">{{ displayText }}</p>
     </div>
 </template>
@@ -13,9 +39,18 @@ export default {
             required: true
         }
     },
+    data: function() {
+        return {
+            showOptions: false,
+            setFontSize: '',
+            setTextAlign: ''
+        }
+    },
     computed: {
         styleObject() {
             return {
+                textAlign: this.setTextAlign,
+                fontSize: this.setFontSize + 'px',
                 height: this.conteinerHeight + 'px'
             }
         }
