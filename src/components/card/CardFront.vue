@@ -8,7 +8,7 @@
         </div>
         <div class="col-sm-6 card card-display">
             <sc-text-output :displayText="textBoxValue1" :conteinerHeight="130"></sc-text-output><hr>
-            <sc-image-output :displayImage="imageName" :conteinerHeight="350"></sc-image-output><hr>
+            <sc-image-output :displayImage="imageName" :conteinerHeight="350" :clearImageProp="clearImage"></sc-image-output><hr>
             <sc-text-output :displayText="textBoxValue2" :conteinerHeight="130"></sc-text-output><hr>
             <sc-text-output :displayText="textBoxValue3" :conteinerHeight="130"></sc-text-output><hr> 
         </div>
@@ -29,6 +29,13 @@ export default {
           textBoxValue3: '',
           imageName: ''
       }  
+    },
+    methods: {
+        clearImage: function () {
+            if(this.imageName != ''){
+            this.imageName = "default_image.png"
+            }
+        }
     },
     components: {
         scTextInput: TextInput,
