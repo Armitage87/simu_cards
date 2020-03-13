@@ -3,10 +3,11 @@
     class="img-container"
     @mouseover="showOptions=true"
     @mouseleave="showOptions=false">
+    <transition name="scale">
         <button type="button" class="btn btn-outline-danger btn-sm"
         v-show="showOptions"
         @click="clearImageProp">Remove Image</button>
-        
+    </transition>
         <img id="outputImage">{{ displayImage }}
     </div>
 </template>
@@ -69,4 +70,7 @@ function setDraggable() {
    img {
        width: 130%;
    }
+
+   
+
 </style>

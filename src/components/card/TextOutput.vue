@@ -104,20 +104,12 @@ export default {
     select {
         height: 40%;
     }
-    .fade-enter {
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
 
     }
-    .fade-enter-active {
-
-    }
-    .fade-enter-to {
-
-    }
-    .fade-leave {
-
-    }
-    .fade-leave-active {
-        
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s;
     }
 
 </style>
