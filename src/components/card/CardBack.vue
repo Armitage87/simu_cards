@@ -15,19 +15,14 @@
 import ImageUpload from './ImageUpload.vue'
 import ImageOutput from './ImageOutput'
 import SectionCompleted from './SectionCompleted.vue'
+import { ClearImageMixin } from '../../clearImageMixin'
 
 export default {
+    mixins: [ClearImageMixin],
     data: () => {
       return {
           imageName: ''
       }  
-    },
-    methods: {
-        clearImage: function () {
-            if(this.imageName != ''){
-            this.imageName = "default_image.png"
-            }
-        }
     },
     components: {
         scImageUpload: ImageUpload,

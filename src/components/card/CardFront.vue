@@ -22,8 +22,10 @@ import TextInput from './TextInput.vue'
 import TextOutput from './TextOutput.vue'
 import ImageUpload from './ImageUpload.vue'
 import SectionCompleted from './SectionCompleted.vue'
+import { ClearImageMixin } from '../../clearImageMixin'
 
 export default {
+    mixins: [ClearImageMixin],
     data: () => {
       return {
           textBoxValue1: '',
@@ -31,13 +33,6 @@ export default {
           textBoxValue3: '',
           imageName: ''
       }  
-    },
-    methods: {
-        clearImage: function () {
-            if(this.imageName != ''){
-            this.imageName = "default_image.png"
-            }
-        }
     },
     components: {
         scTextInput: TextInput,

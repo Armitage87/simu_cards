@@ -21,7 +21,7 @@ export default {
     },
     methods: {
         sectionCompleted: function() {
-            eventBus.$emit('mark-as-completed', this.checked)
+            EventBus.$emit('mark-as-completed', this.checked)
         }
     }
 }

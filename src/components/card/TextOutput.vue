@@ -1,6 +1,7 @@
 <template>
     <div  @mouseover="showOptions=true"
           @mouseleave="showOptions=false">
+       <transition name="fade">
         <form class="small" v-show="showOptions" style="display: inline-block">
             <label for="selectBox">Font Size: </label>
             <select class="custom-select w-auto" id="selectBox" v-model="setFontSize">
@@ -36,6 +37,7 @@
                 </label>
             </div>
         </form>
+        </transition>
         <p :style="styleObject"  
            :class="{ bold: setBold, italic: setItalic }">
             {{ displayText }}
@@ -102,4 +104,20 @@ export default {
     select {
         height: 40%;
     }
+    .fade-enter {
+
+    }
+    .fade-enter-active {
+
+    }
+    .fade-enter-to {
+
+    }
+    .fade-leave {
+
+    }
+    .fade-leave-active {
+        
+    }
+
 </style>

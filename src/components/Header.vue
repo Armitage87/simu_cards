@@ -20,10 +20,14 @@
                 </li>
                 </ul>
             </nav>
+            <hr>
+                <sc-card-progress></sc-card-progress>
     </div>    
 </template>
 
 <script>
+import CardProgress from './card/CardProgress.vue'
+
 export default {
     data: function () {
         return {
@@ -34,6 +38,9 @@ export default {
         pageSelected: function () {
             this.$emit('pageWasChanged', this.pageSelected)
         }
+    },
+    components: {
+        scCardProgress: CardProgress
     }
 }
 </script>
